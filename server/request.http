@@ -1,0 +1,52 @@
+# Register user
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"giang",
+    "password":"123"
+}
+
+###
+# Login user
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"giang",
+    "password":"123"
+}
+
+### 
+# Create post
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZlMWM0ZjQ1MGE4NDI5MDhjMzRjZjYiLCJpYXQiOjE2MjcyNjYxNDF9.ry_IBd9a2bqjCq99jppXkJKcW7mgtS4Jgn3d0Qzdk0k
+
+{
+    "title":"hahakw",
+    "description":"lakls",
+    "url": "aksdlaksj"
+}
+
+### 
+# Get posts
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZlMThkODhhYjZmOTFhMjQ2NmIwNWEiLCJpYXQiOjE2MjcyNjUzMTB9.Qn0xuZjeEyiL9E7pclcMzojY7VfN1pCksWTJ7t05X6c
+
+
+### 
+# Update post
+PUT http://localhost:5000/api/posts/60faecd88db60107c073f8be
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZhZDg4MjE2NGVlOTJkZjBmMzlmYTMiLCJpYXQiOjE2MjcwNTkwNTV9.ykNTn2YQtzbse9XQ2o_WSPxWPOE_69SCKgffBS6IqSE
+
+{
+    "title":"kakaaka",
+    "url":"kaka.com",
+    "status":"OK"
+}
+### 
+# Delete post
+DELETE http://localhost:5000/api/posts/60fd7a992aabd82df0a5f660
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZiN2Q3MzAwNzNjYjBlYWMwMDFlMTIiLCJpYXQiOjE2MjcyMjQ3MTh9.G-b_HvCVOAdlTj4C063MOkTbgn-WyMP__0fgzYGT5mI
